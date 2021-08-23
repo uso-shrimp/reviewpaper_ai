@@ -28,10 +28,6 @@ MAX_LENGTH = 450
 NUM_EMBEDDING_DIM = 100
 NUM_LSTM_UNITS = 96
 
-GLOVE_DIR = 'C:/Users/TR814-Public/PycharmProjects/nlpProject'
-
-# model = Sequential()
-# g_history = tk.keras.callbacks.History()
 HISTORY_FLAG = False
 
 FILE_PATH = None
@@ -119,7 +115,7 @@ def run_AI():
     if WB_PATH is not wb_path:
         WB_PATH = wb_path
 
-    with open('output.txt', 'w+') as f:
+    with open('default_value.txt', 'w+') as f:
         f.write(filePath+"\n")
         f.write(wb_path+"\n")
         f.write(save_dir + "\n")
@@ -289,8 +285,8 @@ if __name__ == '__main__':
     logging.critical('critical message')
 
     DEFAULT_FILE = True
-    if os.path.isfile('output.txt'):
-        with open('output.txt', 'r') as f:
+    if os.path.isfile('default_value.txt'):
+        with open('default_value.txt', 'r') as f:
             default_str = f.readlines()
 
         if len(default_str) is not 6:
